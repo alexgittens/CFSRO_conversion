@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# CAVEAT: make sure you don't have the netcdf module loaded! it makes nccopy not able to write compressed NetCDF files
 # Takes the tarfile containing the grb2 data to be converted to ncl
 # Extracts that variable and writes the netcdf file to the output directory
 # Note that is only intended for use with the ocnh01 files (the others contain forecasts, this contains averages!)
