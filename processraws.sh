@@ -10,7 +10,7 @@
 tarfile=$1
 outdir=$2
 tmpdir=/tmp
-varname=POT_P8_L160_GLL0_avg
+varlist=POT_P8_L160_GLL0_avg,lat_0,lon_0,lv_DBSL0
 
 module load ncl
 
@@ -24,7 +24,7 @@ do
  fname=${gribfile##*/}
  basefname=${fname%.*}
  echo $gribfile
- ncl_convert2nc ${gribfile} -l -v ${varname} -cl 9 -o ${workingdir}
+ ncl_convert2nc ${gribfile} -l -v ${varlist} -cl 9 -o ${workingdir}
  mv -f ${workingdir}/${basefname}.nc ${workingdir}/tmp.nc
  nccopy -d1 ${workingdir}/tmp.nc ${workingdir}/${basefname}.nc
 done;
