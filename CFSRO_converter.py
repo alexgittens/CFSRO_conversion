@@ -254,14 +254,14 @@ class ProcessInformation(object):
         pass
 
 # Variables that should really be command-line settings
-DEBUGFLAG = True
-numNodes = 20
-numProcessesPerNode = 10
-numWriters = 20
-#DEBUGFLAG = False
-#numNodes = 100 # number of physical nodes
+#DEBUGFLAG = True
+#numNodes = 20
 #numProcessesPerNode = 10
-#numWriters = 60 # a good choice is one per physical node (probably up to the number of OSTs used)
+#numWriters = 20
+DEBUGFLAG = False
+numNodes = 100 # number of physical nodes
+numProcessesPerNode = 10
+numWriters = 60 # a good choice is one per physical node (probably up to the number of OSTs used)
 
 basePath = "/global/cscratch1/sd/gittens/large-datasets/rda_ds093.0_dataset"
 dataInPath = basePath + "/netcdfs" 

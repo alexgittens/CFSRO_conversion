@@ -62,6 +62,6 @@ fin = File(inPath + "/outputs/ocean2T.h5", "r")
 md = np.load(inPath + "/outputs/ocean2Tmetadata.npz")
 
 # remember the data is upside down: level 0 is the bottom of the ocean, level 39 is the surface
-result = visualize_depth(fin["rows"], md, 39)
+result = visualize_depth(fin["rows"], md, 0)
 plt.imshow(result, interpolation="nearest")
 plt.show()

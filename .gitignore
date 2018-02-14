@@ -1,6 +1,7 @@
 tasks.txt
 netcdfs/
 raws/
+outputs/
 test.py
 *.tfin
 slurm*.out

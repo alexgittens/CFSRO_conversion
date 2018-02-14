@@ -9,10 +9,12 @@ the interface shows 500 files at a time). You can submit multiple Globus transfe
 
 To save on disk space (the raw datafiles from RDA contain many variables, so the total comes out to be around 11 TB, which I can't download all at once), I downloaded
 the dataset in chunks, and used TaskFarmer on those as described here, then repeated the process until all the files were processed:
-- download the current set of files into a directory
+- mkdir raws
+- download the current set of files into raws (or subdirectories of raw, it doesn't matter, all tars under raws will be used)
 - edit generate\_task\_list.sh as needed to point to the data and output directory
 - run generate\_task\_list.sh
 - edit batch.sl as needed
+- mkdir netcdfs
 - module load taskfarmer
 - sbatch batch.sl
 - verify that done.tasks.txt.fin is present, which mean all the tasks have been completed

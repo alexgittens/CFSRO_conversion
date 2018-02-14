@@ -1,8 +1,11 @@
 #!/bin/sh
 #SBATCH -N 100 
-#SBATCH -p regular
+#SBATCH -q premium
 #SBATCH -t 01:30:00
 #SBATCH -C haswell 
+#SBATCH -J csfso_conversion
+#SBATCH --mail-user=gittea@rpi.edu
+#SBATCH --mail-type=ALL
 
 module unload darshan
 module load h5py-parallel 
