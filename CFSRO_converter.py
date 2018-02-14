@@ -263,10 +263,11 @@ numWriters = 20
 #numProcessesPerNode = 10
 #numWriters = 60 # a good choice is one per physical node (probably up to the number of OSTs used)
 
-dataInPath = "/global/cscratch1/sd/gittens/large-datasets/rda_ds093.0_dataset/netcdfs"
-dataOutFname = "/global/cscratch1/sd/gittens/conversion-code/CFSRO_conversion/output/ocean.h5"
+basePath = "/global/cscratch1/sd/gittens/large-datasets/rda_ds093.0_dataset"
+dataInPath = basePath + "/netcdfs" 
+dataOutFname = basePath + "/outputs/ocean2T.h5" 
 varname = "POT_P8_L160_GLL0_avg"
-metadataFnameOut = "/global/cscratch1/sd/gittens/conversion-code/CFSRO_conversion/output/oceanMetadata.npz"
+metadataFnameOut = basePath + "/outputs/ocean2Tmetadata.npz" 
 
 numLevels = 40
 numLats = 360
